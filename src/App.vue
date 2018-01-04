@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <div id="logo">
-      <router-link :to="{name: 'Artists'}"><img src="./assets/images/logo.png"></router-link>
+      <router-link :to="{path: '/'}"><img src="./assets/images/echo.png"></router-link>
     </div>
     <div id="navbar">
-        <router-link :to="{name: 'Artists'}">
+        <router-link :to="{path: '/artists'}">
             <div class="nav-option active">ARTISTS</div>
         </router-link>
-        <router-link :to="{name: 'About'}">
+        <router-link :to="{path: '/about'}">
             <div class="nav-option">ABOUT</div>
         </router-link>
-        <router-link :to="{name: 'Contact'}">
+        <router-link :to="{path: '/contact'}">
             <div class="nav-option">CONTACT</div>
         </router-link>
     </div>
@@ -18,7 +18,7 @@
     <div id="footer"></div>
   </div>
 </template>
-
+<script defer src='./fontawesome-all.min.js'></script>
 <script>
 export default {
   name: 'app'
@@ -35,11 +35,7 @@ export default {
 }
 #app {
   font-family: 'Roboto Condensed Regular', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 a:link, a:visited {
     text-decoration: none;
@@ -97,9 +93,9 @@ body {
     font-family: "Roboto Condensed Regular", sans-serif;
 }
 
-.nav-option.active {
+/* .nav-option.active {
     color: #d6002a;
-}
+} */
 
 .nav-option:hover {
     color: #333333;
@@ -272,7 +268,7 @@ body {
 audio {}
 
 #track-list {
-    width: 55.5vw;
+    width: 59.5vw;
     display: flex;
     flex-direction: column;
     /*align-items: center;
@@ -280,11 +276,11 @@ audio {}
 }
 
 .track {
-    width: 50vw;
-    max-width: 695px;
+    width: 59.5vw;
+    max-width: 770px;
     height: 60px;
     /*height: 7.407vh;*/
-    margin: 5px 0 0 75px;
+    margin: 5px 0 0 0;
     display: flex;
     flex-direction: column;
 }

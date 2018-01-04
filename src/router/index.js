@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Artists from '@/components/Artists'
 import Artist from '@/components/Artist'
+import Song from '@/components/Song'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
+import '@/fontawesome-all.min.js'
 
 Vue.use(Router)
 
@@ -33,7 +35,13 @@ export default new Router({
       path: '/artist/:artist',
       name: 'Artist',
       component: Artist
+    },
+    {
+      path: '/song/:artist/:album/:song',
+      name: 'Song',
+      component: Song
     }
   ],
-  mode: 'history'
+  mode: 'history',
+  base: __dirname
 })
