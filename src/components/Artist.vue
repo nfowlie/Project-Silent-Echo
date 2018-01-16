@@ -29,7 +29,7 @@
                 <audio :src="track.source" type="audio/mpeg"></audio>
               </div>
             </div>
-            <div class="icons">
+            <div class="icons" v-on:click.capture="play(track.id, track.length)">
               <i class="fas fa-play-circle"></i>
               <i class="fas fa-pause-circle"></i>
             </div>
@@ -51,7 +51,8 @@ export default {
       source: require('../assets/images/logo.png'),
       the_lady_comes_first: {
         artistName: 'The Lady Comes First',
-        biography: 'The Lady Comes First is the collaborative effort of Adrian Emberley and Shoney Lamar, two singer songwriters who have been honing their craft since adolescence. Over the years, after hundreds of songs written each, their individual songwriting styles have emerged full-formed, fearless and distinct.<br/><br/> The two met in the murky Boston music scene in 2011 while each fronting their own successful indie rock bands. When those bands had run their course, Adrian and Shoney found themselves living together, already singing together at open mics and during each other’s sets. The idea to begin performing together seemed inevitable.<br/><br/> While listening to The Lady Comes First, one hears a combination of melodic styles from early blues and jazz singers and a clear love for modern rock and roll, citing influences such as Tom Waits, Talking Heads, Annie Lennox, Portishead, Muddy Waters, Nina Simone, and Howlin Wolf. Adrian and Shoney are multi-instrumentalists with an unwavering focus on songwriting. Their distinct voices somehow blend seamlessly, often confusing audiences as to whose voice is actually being heard. Though they perform live as a stripped-down drums and guitar duo with the occasional harmonica or ukulele thrown in the mix, the studio is where the true breadth of their musical vision shines, using any and all means of fleshing out what they feel each song needs to properly convey the intended emotion and thought.',
+        biography:
+          'The Lady Comes First is the collaborative effort of Adrian Emberley and Shoney Lamar, two singer songwriters who have been honing their craft since adolescence. Over the years, after hundreds of songs written each, their individual songwriting styles have emerged full-formed, fearless and distinct.<br/><br/> The two met in the murky Boston music scene in 2011 while each fronting their own successful indie rock bands. When those bands had run their course, Adrian and Shoney found themselves living together, already singing together at open mics and during each other’s sets. The idea to begin performing together seemed inevitable.<br/><br/> While listening to The Lady Comes First, one hears a combination of melodic styles from early blues and jazz singers and a clear love for modern rock and roll, citing influences such as Tom Waits, Talking Heads, Annie Lennox, Portishead, Muddy Waters, Nina Simone, and Howlin Wolf. Adrian and Shoney are multi-instrumentalists with an unwavering focus on songwriting. Their distinct voices somehow blend seamlessly, often confusing audiences as to whose voice is actually being heard. Though they perform live as a stripped-down drums and guitar duo with the occasional harmonica or ukulele thrown in the mix, the studio is where the true breadth of their musical vision shines, using any and all means of fleshing out what they feel each song needs to properly convey the intended emotion and thought.',
         songs: {
           featured: [
             {
@@ -152,7 +153,8 @@ export default {
       },
       intercooler: {
         artistName: 'Intercooler',
-        biography: 'After making music together for 20 years, Intercooler find themselves in top form, back in the studio with their original lineup and working with gold record producer Darek Mudge (Intercooler guitarist from 2006 – 2011) behind the desk.<br/><br/> The first three songs emerging from their current session, Everytime You Go, Surfin, and Hear The Wind showcase the band in their prime, pumping out their unique brand of infectious indie rock with more on the way.<br/><br/> Their list of critically acclaimed releases: Old School Is The New School,  Dance Of A Thousand Promises,  Forever or Whatever and Time To Let Go  delivered a string of radio friendly hits, receiving high rotation airplay on Australian national radio network Triple J.<br/><br/>Over its career, Intercooler has delivered a steady diet of guitar driven accessible rock that has you humming to yourself after just one listen while still having the depth and multi-layered structure to leave music lovers wanting to explore the songs further.<br/><br/>Intercooler’s music has been used in dozens of international synchronization applications in conjunction with CBS TV, Weinstein Brothers Productions, Sony TV, ABC TV, Lifetime Network, Match.com, Volvo, Billabong, Warner Home Entertainment amongst others.<br/><br/> Intercooler Are: <br/><br/>Phil Ballantyne - volcals guitar<br/><br/>Damon Cox - drums<br/><br/>Michael Caso - guitar<br/><br/>Joel Potter - bass',
+        biography:
+          'After making music together for 20 years, Intercooler find themselves in top form, back in the studio with their original lineup and working with gold record producer Darek Mudge (Intercooler guitarist from 2006 – 2011) behind the desk.<br/><br/> The first three songs emerging from their current session, Everytime You Go, Surfin, and Hear The Wind showcase the band in their prime, pumping out their unique brand of infectious indie rock with more on the way.<br/><br/> Their list of critically acclaimed releases: Old School Is The New School,  Dance Of A Thousand Promises,  Forever or Whatever and Time To Let Go  delivered a string of radio friendly hits, receiving high rotation airplay on Australian national radio network Triple J.<br/><br/>Over its career, Intercooler has delivered a steady diet of guitar driven accessible rock that has you humming to yourself after just one listen while still having the depth and multi-layered structure to leave music lovers wanting to explore the songs further.<br/><br/>Intercooler’s music has been used in dozens of international synchronization applications in conjunction with CBS TV, Weinstein Brothers Productions, Sony TV, ABC TV, Lifetime Network, Match.com, Volvo, Billabong, Warner Home Entertainment amongst others.<br/><br/> Intercooler Are: <br/><br/>Phil Ballantyne - volcals guitar<br/><br/>Damon Cox - drums<br/><br/>Michael Caso - guitar<br/><br/>Joel Potter - bass',
         songs: {
           featured: [
             {
@@ -198,6 +200,301 @@ export default {
               length: '3:17',
               album: 'Surfin',
               source: require('../assets/music/Intercooler/Surfin/Surfin.mp3')
+            }
+          ],
+          oldschoolisthenewschool: [
+            {
+              id: 0,
+              title: 'Goodness of the Girl',
+              length: '3:44',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Goodness of the Girl.mp3')
+            },
+            {
+              id: 1,
+              title: 'For Said',
+              length: '5:05',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/For Said.mp3')
+            },
+            {
+              id: 2,
+              title: 'Emo',
+              length: '3:52',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Emo.mp3')
+            },
+            {
+              id: 3,
+              title: 'Good Friend',
+              length: '3:13',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Good Friend.mp3')
+            },
+            {
+              id: 4,
+              title: 'Lovejoy',
+              length: '5:08',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Lovejoy.mp3')
+            },
+            {
+              id: 5,
+              title: 'Crimson Cracker',
+              length: '2:08',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Crimson Cracker.mp3')
+            },
+            {
+              id: 6,
+              title: 'Leaflet',
+              length: '3:02',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Leaflet.mp3')
+            },
+            {
+              id: 7,
+              title: 'Delicious',
+              length: '3:50',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Delicious.mp3')
+            },
+            {
+              id: 8,
+              title: 'Timothy Tucker Part II',
+              length: '4:02',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Timothy Tucker Part II.mp3')
+            },
+            {
+              id: 9,
+              title: 'Daniel and the Machine',
+              length: '3:45',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Daniel and the Machine.mp3')
+            },
+            {
+              id: 10,
+              title: "If You'd Seen",
+              length: '4:43',
+              album: 'Old School Is the New School',
+              source: require("../assets/music/Intercooler/Old School Is the New School/If You'd Seen.mp3")
+            }
+          ],
+          danceofathousandpromises: [
+            {
+              id: 0,
+              title: 'Cream Puff',
+              length: '3:15',
+              album: 'Dance of a Thousand Promises',
+              source: require('../assets/music/Intercooler/Dance of a Thousand Promises/Cream Puff.mp3')
+            },
+            {
+              id: 1,
+              title: 'If I Try',
+              length: '4:23',
+              album: 'Dance of a Thousand Promises',
+              source: require('../assets/music/Intercooler/Dance of a Thousand Promises/If I Try.mp3')
+            },
+            {
+              id: 2,
+              title: "Lovin' and Leavin'",
+              length: '3:51',
+              album: 'Dance of a Thousand Promises',
+              source: require("../assets/music/Intercooler/Dance of a Thousand Promises/Lovin' and Leavin'.mp3")
+            },
+            {
+              id: 3,
+              title: 'Sugarplum',
+              length: '2:44',
+              album: 'Dance of a Thousand Promises',
+              source: require('../assets/music/Intercooler/Dance of a Thousand Promises/Sugarplum.mp3')
+            },
+            {
+              id: 4,
+              title: "You're Not Gonna Hurt Us Again",
+              length: '5:38',
+              album: 'Dance of a Thousand Promises',
+              source: require("../assets/music/Intercooler/Dance of a Thousand Promises/You're Not Gonna Hurt Us Again.mp3")
+            }
+          ],
+          foreverorwhatever: [
+            {
+              id: 0,
+              title: 'Craving Others',
+              length: '3:38',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Carving Others.mp3')
+            },
+            {
+              id: 1,
+              title: 'Wasted My Day',
+              length: '3:30',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Wasted My Day.mp3')
+            },
+            {
+              id: 2,
+              title: 'Move From My Way',
+              length: '2:44',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Move From My Way.mp3')
+            },
+            {
+              id: 3,
+              title: 'All Coming Back To Me',
+              length: '3:13',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/All Coming Back To Me.mp3')
+            },
+            {
+              id: 4,
+              title: 'Destiny',
+              length: '5:48',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Destiny.mp3')
+            },
+            {
+              id: 5,
+              title: 'Sail This Into Me',
+              length: '2:56',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Sail This Into Me.mp3')
+            },
+            {
+              id: 6,
+              title: 'Hold Me Again',
+              length: '3:01',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Hold Me Again.mp3')
+            },
+            {
+              id: 7,
+              title: 'Come Back Down',
+              length: '6:06',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Come Back Down.mp3')
+            },
+            {
+              id: 8,
+              title: 'Futures Created',
+              length: '4:10',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Futures Created.mp3')
+            },
+            {
+              id: 9,
+              title: 'Pop Clothes',
+              length: '3:07',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Pop Clothes.mp3')
+            },
+            {
+              id: 10,
+              title: 'Situations',
+              length: '3:43',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Situations.mp3')
+            },
+            {
+              id: 11,
+              title: 'Navigate This',
+              length: '3:10',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Navigate This.mp3')
+            },
+            {
+              id: 12,
+              title: 'My Problem',
+              length: '3:40',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/My Problem.mp3')
+            },
+            {
+              id: 13,
+              title: 'Ok Girl',
+              length: '5:43',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Ok Girl.mp3')
+            }
+          ],
+          timetoletgo: [
+            {
+              id: 0,
+              title: 'Good Morning',
+              length: '5:22',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Good Morning.mp3')
+            },
+            {
+              id: 1,
+              title: 'Ready',
+              length: '3:54',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Ready.mp3')
+            },
+            {
+              id: 2,
+              title: 'Time To Let Go',
+              length: '3:57',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Time To Let Go.mp3')
+            },
+            {
+              id: 3,
+              title: 'War + Peace',
+              length: '4:34',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/War + Peace.mp3')
+            },
+            {
+              id: 4,
+              title: "Packin' for Paris",
+              length: '2:03',
+              album: 'Time To Let Go',
+              source: require("../assets/music/Intercooler/Time To Let Go/Packin' for Paris.mp3")
+            },
+            {
+              id: 5,
+              title: 'Trumpet Song',
+              length: '2:58',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Trumpet Song.mp3')
+            },
+            {
+              id: 6,
+              title: 'Easy',
+              length: '4:03',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Easy.mp3')
+            },
+            {
+              id: 7,
+              title: 'Fly Me',
+              length: '2:53',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Fly Me.mp3')
+            },
+            {
+              id: 8,
+              title: 'It Happened in May',
+              length: '4:16',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/It Happened in May.mp3')
+            },
+            {
+              id: 9,
+              title: 'Swimming Clouds',
+              length: '3:53',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Swimming Clouds.mp3')
+            },
+            {
+              id: 10,
+              title: "I Don't Wanna",
+              length: '5:18',
+              album: 'Time To Let Go',
+              source: require("../assets/music/Intercooler/Time To Let Go/I Don't Wanna.mp3")
             }
           ],
           intercooler: [
@@ -264,7 +561,7 @@ export default {
     }
   },
   watch: {
-    '$route' (to, from) {
+    $route (to, from) {
       alert(to.params.artist)
     }
   },
@@ -276,11 +573,23 @@ export default {
   methods: {
     share (track) {
       var clipboard = document.querySelector('.clipboard')
-      clipboard.value = 'www.silentechopublishing.com/song/' + this.current.id + '/' + this.current.tracks[0].album.toLowerCase().replace("'", '') + '/' + track.title
+      clipboard.value =
+        'www.silentechopublishing.com/song/' +
+        this.current.id +
+        '/' +
+        this.current.tracks[0].album.toLowerCase().replace("'", '') +
+        '/' +
+        track.title
       clipboard.select()
       document.execCommand('copy')
       // this.$router.replace('/song/' + this.current.id + '/' + this.current.tracks[0].album.toLowerCase().replace("'", '') + '/' + track.title)
-      alert('Link to ' + track.title + ' by ' + track.artist + ' has been copied to your clipboard.')
+      var modal = document.querySelector('.modal')
+      modal.children[1].textContent = track.title
+      modal.children[3].textContent = this.current.artistName
+      modal.style.opacity = 1
+      setTimeout(function () {
+        modal.style.opacity = 0
+      }, 3000)
     },
     play (a, trackDuration) {
       // Code to play song
@@ -303,8 +612,11 @@ export default {
         pauseButton[a].style.display = 'block'
         tracks[a].play()
         playTimeTracker = setInterval(function () {
-          var remainingTime = parseInt(tracks[a].duration - tracks[a].currentTime, 10)
-          var positionTime = (tracks[a].currentTime / tracks[a].duration) * 100
+          var remainingTime = parseInt(
+            tracks[a].duration - tracks[a].currentTime,
+            10
+          )
+          var positionTime = tracks[a].currentTime / tracks[a].duration * 100
           var mins = Math.floor(remainingTime / 60, 10)
           var secs = remainingTime - mins * 60
           if (secs < 10) {
@@ -323,32 +635,47 @@ export default {
       var tracks = document.querySelectorAll('.track-row')
       var skippingTrack = tracks[id]
       console.log(id)
-      var percentage = ((event.clientX - skippingTrack.firstElementChild.offsetLeft) / skippingTrack.firstElementChild.clientWidth)
-      skippingTrack.lastElementChild.lastElementChild.currentTime = percentage * skippingTrack.lastElementChild.lastElementChild.duration
-      skippingTrack.firstElementChild.firstElementChild.style.width = ((event.clientX - skippingTrack.firstElementChild.offsetLeft) / skippingTrack.firstElementChild.clientWidth) * 100 + '%'
+      var percentage =
+        (event.clientX - skippingTrack.firstElementChild.offsetLeft) /
+        skippingTrack.firstElementChild.clientWidth
+      skippingTrack.lastElementChild.lastElementChild.currentTime =
+        percentage * skippingTrack.lastElementChild.lastElementChild.duration
+      skippingTrack.firstElementChild.firstElementChild.style.width =
+        (event.clientX - skippingTrack.firstElementChild.offsetLeft) /
+          skippingTrack.firstElementChild.clientWidth *
+          100 +
+        '%'
 
-      var remainingTime = parseInt(skippingTrack.lastElementChild.lastElementChild.duration - skippingTrack.lastElementChild.lastElementChild.currentTime, 10)
-        // positionTime = (skippingTrack.lastElementChild.lastElementChild.currentTime / skippingTrack.lastElementChild.lastElementChild.duration) * 100,
+      var remainingTime = parseInt(
+        skippingTrack.lastElementChild.lastElementChild.duration -
+          skippingTrack.lastElementChild.lastElementChild.currentTime,
+        10
+      )
+      // positionTime = (skippingTrack.lastElementChild.lastElementChild.currentTime / skippingTrack.lastElementChild.lastElementChild.duration) * 100,
       var mins = Math.floor(remainingTime / 60, 10)
       var secs = remainingTime - mins * 60
       if (secs < 10) {
         secs = '0' + secs
       }
 
-      skippingTrack.lastElementChild.children[1].textContent = mins + ':' + secs
+      skippingTrack.lastElementChild.children[1].textContent =
+        mins + ':' + secs
     },
     fillData (artist) {
       this.current.id = artist
       this.current.artistName = this[artist].artistName
       this.current.biography = this[artist].biography
-      this.current.imageSource = require('../assets/images/' + artist + '.png')
+      this.current.imageSource = require('../assets/images/' + artist + '.jpg')
 
       for (var key in this[artist].songs) {
         // this.current.albums[key] = this[artist].songs[key][0].album
         if (key === 'featured') {
-          this.current.albums[key] = {id: key, album: 'Featured'}
+          this.current.albums[key] = { id: key, album: 'Featured' }
         } else {
-          this.current.albums[key] = {id: key, album: this[artist].songs[key][0].album}
+          this.current.albums[key] = {
+            id: key,
+            album: this[artist].songs[key][0].album
+          }
         }
         // // this.current.tracks[key] = {id: key, album: this[artist].songs[key]}
         // this.current.tracks.push({key: 32})
@@ -362,10 +689,11 @@ export default {
       console.log(this.current.tracks)
     },
     select (album) {
-      console.log(album)
-      console.log(this.current.tracks[album])
+      console.log('line 1 ' + album)
+      console.log('line 2 ' + this.current.tracks[album])
       this.current.tracks = this[this.current.id].songs[album]
-      console.log(this.current.tracks)
+      this.current.imageSource = require('../assets/images/' + this.current.id + '_' + album + '.jpg')
+      console.log('Line 3 ' + this.current.tracks)
     }
   }
 }
@@ -399,7 +727,7 @@ export default {
 .clipboard {
   position: absolute;
   top: 400px;
-  right: 100px;
+  left: 50vw;
   z-index: -1;
 }
 body {

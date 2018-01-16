@@ -4,7 +4,7 @@
       <div class="artist">
         <router-link :to="{name: 'Artist', params: { artist: 'intercooler'}}">
           <div class="image-tint">
-              <img src="../assets/images/intercooler.png">
+              <img src="../assets/images/intercooler.jpg">
           </div>
           <div>Intercooler</div>
         </router-link>
