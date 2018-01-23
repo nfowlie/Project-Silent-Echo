@@ -134,7 +134,7 @@ body {
   position: relative;
 }
 
-#albums::before {
+/* #albums::before {
   display: none;
   font-family: "Font Awesome 5 Solid";
   content: "\f351";
@@ -145,7 +145,7 @@ body {
   font-family: "Font Awesome 5 Solid";
   content: "\f352";
   position: absolute;
-}
+} */
 
 .album {
   margin-right: 20px;

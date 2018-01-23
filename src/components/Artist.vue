@@ -692,7 +692,7 @@ export default {
       console.log('line 1 ' + album)
       console.log('line 2 ' + this.current.tracks[album])
       this.current.tracks = this[this.current.id].songs[album]
-      this.current.imageSource = require('../assets/images/' + this.current.id + '_' + album + '.jpg')
+      this.current.imageSource = require('../assets/images/' + this.current.id + '/' + album + '.jpg')
       console.log('Line 3 ' + this.current.tracks)
     }
   }
