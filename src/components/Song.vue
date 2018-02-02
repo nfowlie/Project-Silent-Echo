@@ -65,10 +65,17 @@ export default {
             },
             {
               id: 1,
-              title: 'Stix and Stones',
-              length: '3:18',
+              title: 'Only Love',
+              length: '3:31',
               album: "d'elinore",
-              source: require('../assets/music/The Lady Comes First/Stix and Stones.mp3')
+              source: require('../assets/music/The Lady Comes First/Only Love.mp3')
+            },
+            {
+              id: 2,
+              title: 'Lite On',
+              length: '2:59',
+              album: "d'elinore",
+              source: require('../assets/music/The Lady Comes First/Lite On.mp3')
             }
           ],
           delinore: [
@@ -167,18 +174,68 @@ export default {
             },
             {
               id: 1,
-              title: 'See The Wind Go',
-              length: '3:36',
-              album: 'Surfin',
-              source: require('../assets/music/Intercooler/Surfin/See The Wind Go.mp3')
-            },
-            {
-              id: 2,
               title: 'Surfin',
               length: '3:17',
               album: 'Surfin',
               source: require('../assets/music/Intercooler/Surfin/Surfin.mp3')
+            },
+            {
+              id: 2,
+              title: 'Goodness of the Girl',
+              length: '3:44',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Goodness of the Girl.mp3')
+            },
+            {
+              id: 3,
+              title: 'Crimson Cracker',
+              length: '2:08',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Crimson Cracker.mp3')
+            },
+            {
+              id: 4,
+              title: 'Cream Puff',
+              length: '3:15',
+              album: 'Dance of a Thousand Promises',
+              source: require('../assets/music/Intercooler/Dance of a Thousand Promises/Cream Puff.mp3')
+            },
+            {
+              id: 5,
+              title: 'Sugarplum',
+              length: '2:44',
+              album: 'Dance of a Thousand Promises',
+              source: require('../assets/music/Intercooler/Dance of a Thousand Promises/Sugarplum.mp3')
+            },
+            {
+              id: 6,
+              title: 'Wasted My Day',
+              length: '3:30',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Wasted My Day.mp3')
+            },
+            {
+              id: 7,
+              title: 'Move From My Way',
+              length: '2:44',
+              album: 'Forever or Whatever',
+              source: require('../assets/music/Intercooler/Forever or Whatever/Move From My Way.mp3')
+            },
+            {
+              id: 8,
+              title: 'Fly Me',
+              length: '2:53',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Fly Me.mp3')
+            },
+            {
+              id: 9,
+              title: 'Ready',
+              length: '3:54',
+              album: 'Time To Let Go',
+              source: require('../assets/music/Intercooler/Time To Let Go/Ready.mp3')
             }
+
           ],
           surfin: [
             {
@@ -190,7 +247,7 @@ export default {
             },
             {
               id: 1,
-              title: 'See The Wind Go',
+              title: 'See The Wind',
               length: '3:36',
               album: 'Surfin',
               source: require('../assets/music/Intercooler/Surfin/See The Wind Go.mp3')
@@ -497,57 +554,6 @@ export default {
               album: 'Time To Let Go',
               source: require("../assets/music/Intercooler/Time To Let Go/I Don't Wanna.mp3")
             }
-          ],
-          intercooler: [
-            {
-              id: 0,
-              title: 'All I want',
-              length: '2:41',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/All I want.mp3')
-            },
-            {
-              id: 1,
-              title: 'better lock your goat away',
-              length: '4:38',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/better lock your goat away.mp3')
-            },
-            {
-              id: 2,
-              title: 'I never wanted a dolly',
-              length: '2:49',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/I never wanted a dolly.mp3')
-            },
-            {
-              id: 3,
-              title: 'wopperflux',
-              length: '3:38',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/wopperflux.mp3')
-            },
-            {
-              id: 4,
-              title: 'dog shit feet',
-              length: '3:52',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/dog ---- feet.mp3')
-            },
-            {
-              id: 5,
-              title: 'bored',
-              length: '7:19',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/bored.mp3')
-            },
-            {
-              id: 6,
-              title: 'Hawaii',
-              length: '3:35',
-              album: 'Intercooler',
-              source: require('../assets/music/Intercooler/Intercooler/Hawaii.mp3')
-            }
           ]
         }
       },
@@ -635,10 +641,13 @@ export default {
       skippingTrack.lastElementChild.children[1].textContent = mins + ':' + secs
     },
     fillData (artist, album, song) {
+      console.log('jlkfjsk ' + album)
+      album = album.replace(/\s/g, '')
+      console.log('NO Space ' + album)
       this.current.id = artist
       this.current.artistName = this[artist].artistName
       this.current.biography = this[artist].biography
-      this.current.imageSource = require('../assets/images/' + artist + '.png')
+      this.current.imageSource = require('../assets/images/' + artist + '/' + album + '.jpg')
       console.log('sals' + album)
       this.current.albums[album] = {id: album, album: this[artist].songs[album][0].album}
       for (var key in this[artist].songs[album]) {
@@ -651,6 +660,7 @@ export default {
       console.log(this.current.tracks)
     },
     select (artist, album, song) {
+      album = album.replace(/\s/g, '')
       console.log(album)
       console.log(this.current.tracks[album])
       for (var key in this[artist].songs[album]) {
