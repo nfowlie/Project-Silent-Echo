@@ -13,7 +13,7 @@
         <input class="clipboard">
         <div id="track-list">
           <div id="albums">
-            <div @click="select(album.id)" class="album" v-for="album in current.albums">{{ album.album }}</div>
+            <div @click="clickSelect(album.id, $event)" class="album" v-for="album in current.albums">{{ album.album }}</div>
           </div>
           <div class="track" v-for="track in current.tracks">
             <div class="track-row">
@@ -161,7 +161,7 @@ export default {
       intercooler: {
         artistName: 'Intercooler',
         biography:
-          'After making music together for 20 years, Intercooler find themselves in top form, back in the studio with their original lineup and working with gold record producer Darek Mudge (Intercooler guitarist from 2006 – 2011) behind the desk.<br/><br/> The first three songs emerging from their current session, Everytime You Go, Surfin, and Hear The Wind showcase the band in their prime, pumping out their unique brand of infectious indie rock with more on the way.<br/><br/> Their list of critically acclaimed releases: Old School Is The New School,  Dance Of A Thousand Promises,  Forever or Whatever and Time To Let Go  delivered a string of radio friendly hits, receiving high rotation airplay on Australian national radio network Triple J.<br/><br/>Over its career, Intercooler has delivered a steady diet of guitar driven accessible rock that has you humming to yourself after just one listen while still having the depth and multi-layered structure to leave music lovers wanting to explore the songs further.<br/><br/>Intercooler’s music has been used in dozens of international synchronization applications in conjunction with CBS TV, Weinstein Brothers Productions, Sony TV, ABC TV, Lifetime Network, Match.com, Volvo, Billabong, Warner Home Entertainment amongst others.<br/><br/> Intercooler Are: <br/><br/>Phil Ballantyne - volcals guitar<br/><br/>Damon Cox - drums<br/><br/>Michael Caso - guitar<br/><br/>Joel Potter - bass',
+          'After making music together for 20 years, Intercooler find themselves in top form, back in the studio with their original lineup and working with gold record producer Darek Mudge (Intercooler guitarist from 2006 – 2011) behind the desk.<br/<br/>The first three songs emerging from their current session, <span class="bio-emphasis song">Everytime You Go</span>, <span class="bio-emphasis song">Surfin</span>, and <span class="bio-emphasis song">Hear The Wind</span> showcase the band in their prime, pumping out their unique brand of infectious indie rock with more on the way.<br/><br/>Their list of critically acclaimed releases: <span class="bio-emphasis release">Old School Is The New School</span>, <span class="bio-emphasis release">Dance Of A Thousand Promises</span>, <span class="bio-emphasis release">Forever or Whatever</span> and <span class="bio-emphasis release">Time To Let Go</span> delivered a string of radio friendly hits, receiving high rotation airplay on Australian national radio network Triple J and winning over fans in Australia and abroad<br/><br/>Throughout their career, Intercooler have delivered a steady diet of guitar driven rock that has you instantly humming to yourself, while still possessing the depth and multi-layered structure to reward music lovers with each listen.<br/><br/>Intercooler’s music has been used in dozens of international synchronization applications in conjunction with CBS TV, Sony TV, ABC TV, Lifetime Network, Match.com, Volvo, Billabong, Weinstein Brothers Productions, Warner Home Entertainment amongst others.<br/><br/>Intercooler Are:<br/><br/>Phil Ballantyne- vocals guitar<br/><br/>Damon Cox – drums<br/><br/>Michael Caso – guitar<br/><br/>Joel Potter – bass',
         songs: {
           featured: [
             {
@@ -701,6 +701,17 @@ export default {
       this.current.tracks = this[this.current.id].songs[album]
       this.current.imageSource = require('../assets/images/' + this.current.id + '/' + album + '.jpg')
       console.log('Line 3 ' + this.current.tracks)
+    },
+    clickSelect (album, event) {
+      if (document.querySelector('.album.active')) {
+        document.querySelector('.album.active').classList.remove('active')
+      } else {
+        document.querySelector('.album:first-child').style.fontWeight = 'normal'
+        document.querySelector('.album:first-child').style.color = '#555555'
+      }
+      this.current.tracks = this[this.current.id].songs[album]
+      this.current.imageSource = require('../assets/images/' + this.current.id + '/' + album + '.jpg')
+      event.target.classList.add('active')
     }
   }
 }

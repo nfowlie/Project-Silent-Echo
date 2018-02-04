@@ -148,17 +148,25 @@ body {
 } */
 
 .album {
-  margin-right: 20px;
   font-size: 22px;
+}
+
+.album:not(:last-child) {
+  margin-right: 20px;
 }
 
 .album:not(:hover) {
   color: #555555;
 }
 
-.album.active {
+.album:first-child, .album.active {
   font-weight: bold;
   color: #000;
+}
+
+.album:first-child.active{
+  font-weight: bold!important;
+  color: #000!important;
 }
 
 .album:hover {
@@ -253,6 +261,8 @@ body {
 .about-text {
   display: flex;
   flex-direction: column;
+  width: 90vw;
+  max-width: 1200px;
 }
 
 .about-header {
@@ -275,7 +285,7 @@ body {
 }
 
 .artist-name {
-  font-size: 23px;
+  font-size: 30px;
   margin: 20px 0;
 }
 
@@ -286,7 +296,7 @@ body {
 #current-artist #bio,
 #bio img {
   width: 30vw;
-  max-width: 430px;
+  max-width: 400px;
 }
 
 #play-button {
@@ -306,7 +316,7 @@ audio {
 
 .track {
   width: 59.5vw;
-  max-width: 770px;
+  max-width: 800px;
   height: 60px;
   /*height: 7.407vh;*/
   margin: 5px 0 0 0;
@@ -393,5 +403,11 @@ audio {
 .modal-artist {
   font-weight: bold;
   font-size: 25px;
+}
+
+.bio-emphasis{
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>
