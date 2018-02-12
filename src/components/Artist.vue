@@ -161,7 +161,7 @@ export default {
       intercooler: {
         artistName: 'Intercooler',
         biography:
-          'After making music together for 20 years, Intercooler find themselves in top form, back in the studio with their original lineup and working with gold record producer Darek Mudge (Intercooler guitarist from 2006 – 2011) behind the desk.<br/<br/>The first three songs emerging from their current session, <span class="bio-emphasis song">Everytime You Go</span>, <span class="bio-emphasis song">Surfin</span>, and <span class="bio-emphasis song">Hear The Wind</span> showcase the band in their prime, pumping out their unique brand of infectious indie rock with more on the way.<br/><br/>Their list of critically acclaimed releases: <span class="bio-emphasis release">Old School Is The New School</span>, <span class="bio-emphasis release">Dance Of A Thousand Promises</span>, <span class="bio-emphasis release">Forever or Whatever</span> and <span class="bio-emphasis release">Time To Let Go</span> delivered a string of radio friendly hits, receiving high rotation airplay on Australian national radio network Triple J and winning over fans in Australia and abroad<br/><br/>Throughout their career, Intercooler have delivered a steady diet of guitar driven rock that has you instantly humming to yourself, while still possessing the depth and multi-layered structure to reward music lovers with each listen.<br/><br/>Intercooler’s music has been used in dozens of international synchronization applications in conjunction with CBS TV, Sony TV, ABC TV, Lifetime Network, Match.com, Volvo, Billabong, Weinstein Brothers Productions, Warner Home Entertainment amongst others.<br/><br/>Intercooler Are:<br/><br/>Phil Ballantyne- vocals guitar<br/><br/>Damon Cox – drums<br/><br/>Michael Caso – guitar<br/><br/>Joel Potter – bass',
+          'After making music together for 20 years, Intercooler find themselves in top form, back in the studio with their original lineup and working with gold record producer Darek Mudge (Intercooler guitarist from 2006 – 2011) behind the desk.<br/><br/>The first three songs emerging from their current session, <span class="bio-emphasis song">Everytime You Go</span>, <span class="bio-emphasis song">Surfin</span>, and <span class="bio-emphasis song">Hear The Wind</span> showcase the band in their prime, pumping out their unique brand of infectious indie rock with more on the way.<br/><br/>Their list of critically acclaimed releases: <span class="bio-emphasis release">Old School Is The New School</span>, <span class="bio-emphasis release">Dance Of A Thousand Promises</span>, <span class="bio-emphasis release">Forever or Whatever</span> and <span class="bio-emphasis release">Time To Let Go</span> delivered a string of radio friendly hits, receiving high rotation airplay on Australian national radio network Triple J and winning over fans in Australia and abroad<br/><br/>Throughout their career, Intercooler have delivered a steady diet of guitar driven rock that has you instantly humming to yourself, while still possessing the depth and multi-layered structure to reward music lovers with each listen.<br/><br/>Intercooler’s music has been used in dozens of international synchronization applications in conjunction with CBS TV, Sony TV, ABC TV, Lifetime Network, Match.com, Volvo, Billabong, Weinstein Brothers Productions, Warner Home Entertainment amongst others.<br/><br/>Intercooler Are:<br/><br/>Phil Ballantyne- vocals guitar<br/><br/>Damon Cox – drums<br/><br/>Michael Caso – guitar<br/><br/>Joel Potter – bass',
         songs: {
           featured: [
             {
@@ -269,10 +269,10 @@ export default {
             },
             {
               id: 1,
-              title: 'For Said',
+              title: 'Tea Ball',
               length: '5:05',
               album: 'Old School Is the New School',
-              source: require('../assets/music/Intercooler/Old School Is the New School/For Said.mp3')
+              source: require('../assets/music/Intercooler/Old School Is the New School/Tea Ball.mp3')
             },
             {
               id: 2,
@@ -283,59 +283,80 @@ export default {
             },
             {
               id: 3,
+              title: 'For Said',
+              length: '5:05',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/For Said.mp3')
+            },
+            {
+              id: 4,
               title: 'Good Friend',
               length: '3:13',
               album: 'Old School Is the New School',
               source: require('../assets/music/Intercooler/Old School Is the New School/Good Friend.mp3')
             },
             {
-              id: 4,
-              title: 'Lovejoy',
-              length: '5:08',
+              id: 5,
+              title: "It's Like a Girl",
+              length: '2:49',
               album: 'Old School Is the New School',
-              source: require('../assets/music/Intercooler/Old School Is the New School/Lovejoy.mp3')
+              source: require("../assets/music/Intercooler/Old School Is the New School/It's Like a Girl.mp3")
             },
             {
-              id: 5,
+              id: 6,
               title: 'Crimson Cracker',
               length: '2:08',
               album: 'Old School Is the New School',
               source: require('../assets/music/Intercooler/Old School Is the New School/Crimson Cracker.mp3')
             },
             {
-              id: 6,
+              id: 7,
+              title: 'Country',
+              length: '2:58',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Country.mp3')
+            },
+            {
+              id: 8,
               title: 'Leaflet',
               length: '3:02',
               album: 'Old School Is the New School',
               source: require('../assets/music/Intercooler/Old School Is the New School/Leaflet.mp3')
             },
             {
-              id: 7,
+              id: 9,
               title: 'Delicious',
               length: '3:50',
               album: 'Old School Is the New School',
               source: require('../assets/music/Intercooler/Old School Is the New School/Delicious.mp3')
             },
             {
-              id: 8,
+              id: 10,
               title: 'Timothy Tucker Part II',
               length: '4:02',
               album: 'Old School Is the New School',
               source: require('../assets/music/Intercooler/Old School Is the New School/Timothy Tucker Part II.mp3')
             },
             {
-              id: 9,
+              id: 11,
               title: 'Daniel and the Machine',
               length: '3:45',
               album: 'Old School Is the New School',
               source: require('../assets/music/Intercooler/Old School Is the New School/Daniel and the Machine.mp3')
             },
             {
-              id: 10,
+              id: 12,
               title: "If You'd Seen",
               length: '4:43',
               album: 'Old School Is the New School',
               source: require("../assets/music/Intercooler/Old School Is the New School/If You'd Seen.mp3")
+            },
+            {
+              id: 13,
+              title: 'Lovejoy',
+              length: '5:08',
+              album: 'Old School Is the New School',
+              source: require('../assets/music/Intercooler/Old School Is the New School/Lovejoy.mp3')
             }
           ],
           danceofathousandpromises: [
@@ -743,9 +764,10 @@ export default {
   display: none;
 }
 .clipboard {
-  position: absolute;
-  top: 400px;
+  position: fixed;
+  top: 50vh;
   left: 50vw;
+  width:0;
   z-index: -1;
 }
 body {

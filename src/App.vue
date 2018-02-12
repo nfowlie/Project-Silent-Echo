@@ -294,9 +294,9 @@ body {
 }
 
 #current-artist #bio,
-#bio img {
-  width: 30vw;
+#bio img, #play-button, #play-button #artist-image, .artist-name, .bio {
   max-width: 400px;
+  width: 30vw;
 }
 
 #play-button {
@@ -307,6 +307,7 @@ audio {
 }
 
 #track-list {
+  max-width: 800px;
   width: 59.5vw;
   display: flex;
   flex-direction: column;
@@ -409,5 +410,41 @@ audio {
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 520px) {
+  body{
+    /* background-color: blue; */
+  }
+  #artists{
+    justify-content: space-between;
+  }
+  .artist{
+    margin: 42px 0 0 0;
+  }
+  .artist img{
+    width: 40vw;
+    height: 40vw;
+  }
+  #current-artist{
+    flex-direction: column;
+  }
+  #current-artist #bio, #bio img, #play-button, #play-button #artist-image, .artist-name, .bio, #track-list, .track, .track-row{
+    width:100%!important;
+    max-width: 100%!important;
+  }
+  .track{
+    height: 85px!important;
+  }
+  .track-row{
+    margin: 0!important;
+  }
+  #albums{
+    margin: 20px 0;
+    overflow: auto;
+  }
+  .album{
+    white-space: nowrap;
+  }
 }
 </style>
