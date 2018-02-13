@@ -65,6 +65,10 @@ body {
   align-items: center;
 }
 
+#app{
+  background-color: #b7d2ff;
+}
+
 #logo {
   margin-top: 20px;
   height: 216px;

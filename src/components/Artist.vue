@@ -10,7 +10,6 @@
         <div class="artist-name">{{ current.artistName }}</div>
           <div class="bio" v-html="current.biography"></div>
         </div>
-        <input class="clipboard">
         <div id="track-list">
           <div id="albums">
             <div @click="clickSelect(album.id, $event)" class="album" v-for="album in current.albums">{{ album.album }}</div>
@@ -33,7 +32,7 @@
               <i class="fas fa-play-circle"></i>
               <i class="fas fa-pause-circle"></i>
             </div>
-            <div class="icons" v-on:click="share(track)">
+            <div class="icons" v-on:click="share(track, $event)">
               <i class="fas fa-share-alt"></i>
             </div>
           </div>
@@ -596,21 +595,17 @@ export default {
     // alert(this.$route.params.artist)
     this.fillData(this.$route.params.artist)
     this.select('featured')
+    new Clipboard('.icons')
   },
   methods: {
-    share (track) {
-      console.log(track.album)
-      var clipboard = document.querySelector('.clipboard')
-      clipboard.value =
-        'www.silentechopublishing.com/song/' +
+    share (track, event) {
+      var value = 'www.silentechopublishing.com/song/' +
         this.current.id +
         '/' +
         track.album.toLowerCase().replace("'", '') +
         '/' +
         track.title
-      clipboard.select()
-      document.execCommand('copy')
-      // this.$router.replace('/song/' + this.current.id + '/' + this.current.tracks[0].album.toLowerCase().replace("'", '') + '/' + track.title)
+      event.target.parentNode.setAttribute('data-clipboard-text', value)
       var modal = document.querySelector('.modal')
       modal.children[1].textContent = track.title
       modal.children[3].textContent = this.current.artistName

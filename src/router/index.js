@@ -6,6 +6,7 @@ import Song from '@/components/Song'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import '@/fontawesome-all.min.js'
+import '@/clipboard.min.js'
 
 Vue.use(Router)
 
