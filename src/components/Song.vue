@@ -43,6 +43,7 @@
 </template>
 
 <script>
+var modalTimer
 export default {
   name: 'Artist',
   data () {
@@ -611,7 +612,8 @@ export default {
       modal.children[1].textContent = track.title
       modal.children[3].textContent = this.current.artistName
       modal.style.opacity = 1
-      setTimeout(function () {
+      clearTimeout(modalTimer)
+      modalTimer = setTimeout(function(){
         modal.style.opacity = 0
       }, 3000)
     },

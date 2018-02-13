@@ -450,5 +450,21 @@ audio {
   .album{
     white-space: nowrap;
   }
+  .modal{
+    width: 95vw;
+    height: 150px;
+    position: fixed;
+    left: 2.5vw;
+    top: 20px;
+    background-color: rgba(71, 201, 162, 0.9);
+    border-radius: 10px;
+    transition: 1.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    opacity: 0;
+  }
 }
 </style>

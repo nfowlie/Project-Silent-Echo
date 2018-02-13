@@ -42,6 +42,7 @@
 </template>
 
 <script>
+var modalTimer
 export default {
   name: 'Artist',
   data () {
@@ -610,7 +611,8 @@ export default {
       modal.children[1].textContent = track.title
       modal.children[3].textContent = this.current.artistName
       modal.style.opacity = 1
-      setTimeout(function () {
+      clearTimeout(modalTimer)
+      modalTimer = setTimeout(function(){
         modal.style.opacity = 0
       }, 3000)
     },
@@ -691,7 +693,6 @@ export default {
       this.current.imageSource = require('../assets/images/' + artist + '.jpg')
 
       for (var key in this[artist].songs) {
-        // this.current.albums[key] = this[artist].songs[key][0].album
         if (key === 'featured') {
           this.current.albums[key] = { id: key, album: 'Featured' }
         } else {
@@ -700,23 +701,11 @@ export default {
             album: this[artist].songs[key][0].album
           }
         }
-        // // this.current.tracks[key] = {id: key, album: this[artist].songs[key]}
-        // this.current.tracks.push({key: 32})
-        // for (var innerkey in this[artist].songs[key]) {
-        //   console.log(this[artist].songs[key][innerkey].title)
-        //   this.current.tracks.key = 'e'
-        //   this.current.tracks.key.push(this[artist].songs[key][innerkey].title)
-        // }
       }
-      console.log(this.current.albums)
-      console.log(this.current.tracks)
     },
     select (album) {
-      console.log('line 1 ' + album)
-      console.log('line 2 ' + this.current.tracks[album])
       this.current.tracks = this[this.current.id].songs[album]
       this.current.imageSource = require('../assets/images/' + this.current.id + '/' + album + '.jpg')
-      console.log('Line 3 ' + this.current.tracks)
     },
     clickSelect (album, event) {
       if (document.querySelector('.album.active')) {
