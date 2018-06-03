@@ -32,7 +32,7 @@
               <i class="fas fa-play-circle"></i>
               <i class="fas fa-pause-circle"></i>
             </div>
-            <div class="icons" v-on:click="share(current.tracks, $event)">
+            <div class="icons" v-on:click="share(current.tracks, $event)" v-clipboard:copy="'http:www.silentechopublishing.com/song/' + current.id + '/' + current.tracks.album.toLowerCase() + '/' + current.tracks.title">
               <i class="fas fa-share-alt"></i>
             </div>
           </div>
@@ -578,6 +578,331 @@ export default {
           ]
         }
       },
+      mrdreem: {
+        artistName: 'Mr. Dreem',
+        biography:
+          'Austin and Aaron Peacock, the sibling duo who comprise Mr. Dreem, share a passion for ecletic, multilayered indie rock that is on full display on their debut album, The Impossible Sometimes. Combining soaring vocal harmonies with electric guitar, synthesizers, and a drum machine, Mr. Dreem has created a deep and experimental sonic landscape, while lyrically exploring uncertainty, conspiracy, chance and fate.',
+        songs: {
+          featured: [
+            {
+              id: 0,
+              title: 'Tin Foil Hat',
+              length: '4:58',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Tin Foil Hat.mp3')
+            },
+            {
+              id: 1,
+              title: 'You Versus the World',
+              length: '3:54',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/You Versus the World.mp3')
+            },
+            {
+              id: 2,
+              title: 'The Ether',
+              length: '4:52',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/The Ether.mp3')
+            }
+          ],
+          theimpossiblesometimes: [
+            {
+              id: 0,
+              title: 'Undefined',
+              length: '4:47',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Undefined.mp3')
+            },
+            {
+              id: 1,
+              title: 'The Grand Scheme of Things',
+              length: '4:48',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/The Grand Scheme of Things.mp3')
+            },
+            {
+              id: 2,
+              title: 'Do More Be Better',
+              length: '3:47',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Do More Be Better.mp3')
+            },
+            {
+              id: 3,
+              title: 'Simple Mistake',
+              length: '1:02',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Simple Mistake.mp3')
+            },
+            {
+              id: 4,
+              title: 'You Versus the World',
+              length: '3:54',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/You Versus the World.mp3')
+            },
+            {
+              id: 5,
+              title: 'Bulldog',
+              length: '3:36',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Bulldog.mp3')
+            },
+            {
+              id: 6,
+              title: 'The Ether',
+              length: '4:52',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/The Ether.mp3')
+            },
+            {
+              id: 7,
+              title: 'Mr. Winters',
+              length: '3:54',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Mr. Winters.mp3')
+            },
+            {
+              id: 8,
+              title: 'Midnight Riot',
+              length: '4:42',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Midnight Riot.mp3')
+            },
+            {
+              id: 9,
+              title: 'Tin Foil Hat',
+              length: '4:58',
+              album: 'The Impossible Sometimes',
+              source: require('../assets/music/Mr Dreem/The Impossible Sometimes/Tin Foil Hat.mp3')
+            }
+          ]
+        }
+      },
+      crop_circles: {
+        artistName: 'Crop Circles',
+        biography: '',
+        songs: {
+          featured: [
+            {
+              id: 0,
+              title: 'Back In Time',
+              length: '4:04',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Back In Time.mp3')
+            },
+            {
+              id: 1,
+              title: 'Tidal Wave',
+              length: '5:11',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Tidal Wave.mp3')
+            },
+            {
+              id: 2,
+              title: 'High In The Sky',
+              length: '3:12',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/High In The Sky.mp3')
+            }
+          ],
+          cropcircles: [
+            {
+              id: 0,
+              title: 'Mercury',
+              length: '3:36',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Mercury.mp3')
+            },
+            {
+              id: 1,
+              title: 'World Controller',
+              length: '3:19',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/World Controller.mp3')
+            },
+            {
+              id: 2,
+              title: 'Hideaway',
+              length: '4:26',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Hideaway.mp3')
+            },
+            {
+              id: 3,
+              title: 'Illusion',
+              length: '3:55',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Illusion.mp3')
+            },
+            {
+              id: 4,
+              title: 'Without You',
+              length: '4:28',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Without You.mp3')
+            },
+            {
+              id: 5,
+              title: 'Sour Grapes',
+              length: '2:24',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Sour Grapes.mp3')
+            },
+            {
+              id: 6,
+              title: 'Tidal Wave',
+              length: '5:11',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Tidal Wave.mp3')
+            },
+            {
+              id: 7,
+              title: 'High In The Sky',
+              length: '3:12',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/High In The Sky.mp3')
+            },
+            {
+              id: 8,
+              title: 'Back In Time',
+              length: '4:04',
+              album: 'Crop Circles',
+              source: require('../assets/music/Crop Circles/Back In Time.mp3')
+            }
+          ]
+        }
+      },
+      the_people_people: {
+        artistName: 'The People People',
+        biography: '',
+        songs: {
+          featured: [
+            {
+              id: 0,
+              title: 'I Wanna Girl, I Wanna Boy',
+              length: '3:11',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/I Wanna Girl, I Wanna Boy.mp3')
+            },
+            {
+              id: 1,
+              title: 'You Never Know',
+              length: '4:01',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/You Never Know.mp3')
+            },
+            {
+              id: 2,
+              title: 'The Crocodillian',
+              length: '2:52',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/The Crocodillian.mp3')
+            }
+          ],
+          primpin: [
+            {
+              id: 0,
+              title: 'All Going Down, But Its Gonna Be Alright',
+              length: '3:40',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/All Going Down, But Its Gonna Be Alright.mp3')
+            },
+            {
+              id: 1,
+              title: 'We Are People People',
+              length: '3:12',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/We Are People People.mp3')
+            },
+            {
+              id: 2,
+              title: 'Banish Me',
+              length: '4:09',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Banish Me.mp3')
+            },
+            {
+              id: 3,
+              title: 'We All Wanna Drive Our Cars',
+              length: '3:29',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/We All Wanna Drive Our Cars.mp3')
+            },
+            {
+              id: 4,
+              title: 'Haircut',
+              length: '3:01',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Haircut.mp3')
+            },
+            {
+              id: 5,
+              title: 'Clarke Nova',
+              length: '2:43',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Clarke Nova.mp3')
+            },
+            {
+              id: 6,
+              title: 'Everything is OK',
+              length: '5:24',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Everything is OK.mp3')
+            },
+            {
+              id: 7,
+              title: 'Groovus Moondus',
+              length: '3:25',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Groovus Moondus.mp3')
+            },
+            {
+              id: 8,
+              title: 'Change My Mind',
+              length: '6:17',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Change My Mind.mp3')
+            },
+            {
+              id: 9,
+              title: 'Wasted On You',
+              length: '4:18',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/Wasted On You.mp3')
+            },
+            {
+              id: 10,
+              title: "Where I'm Going",
+              length: '4:38',
+              album: 'Primpin',
+              source: require("../assets/music/The People People/Where I'm Going.mp3")
+            },
+            {
+              id: 11,
+              title: 'I Wanna Girl, I Wanna Boy',
+              length: '3:11',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/I Wanna Girl, I Wanna Boy.mp3')
+            },
+            {
+              id: 12,
+              title: 'You Never Know',
+              length: '4:01',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/You Never Know.mp3')
+            },
+            {
+              id: 13,
+              title: 'The Crocodillian',
+              length: '2:52',
+              album: 'Primpin',
+              source: require('../assets/music/The People People/The Crocodillian.mp3')
+            }
+          ]
+        }
+      },
       current: {
         id: null,
         artistName: null,
@@ -668,29 +993,31 @@ export default {
     fillData (artist, album, song) {
       console.log('jlkfjsk ' + album)
       album = album.replace(/\s/g, '')
+      var tempAlbum = album.toLowerCase().replace("'", '')
       console.log('NO Space ' + album)
       this.current.id = artist
       this.current.artistName = this[artist].artistName
       this.current.biography = this[artist].biography
-      this.current.imageSource = require('../assets/images/' + artist + '/' + album + '.jpg')
+      this.current.imageSource = require('../assets/images/' + artist + '/' + tempAlbum + '.jpg')
       console.log('sals' + album)
-      this.current.albums[album] = {id: album, album: this[artist].songs[album][0].album}
-      for (var key in this[artist].songs[album]) {
-        if (this[artist].songs[album][key].title === song) {
-          this.current.song = this[artist].songs[album][key]
+      this.current.albums[tempAlbum] = {id: tempAlbum, album: this[artist].songs[tempAlbum][0].album}
+      for (var key in this[artist].songs[tempAlbum]) {
+        if (this[artist].songs[tempAlbum][key].title === song) {
+          this.current.song = this[artist].songs[tempAlbum][key]
         }
       }
-      this.current.song = this[artist].songs[album]
+      this.current.song = this[artist].songs[tempAlbum]
       console.log(this.current.albums)
       console.log(this.current.tracks)
     },
     select (artist, album, song) {
       album = album.replace(/\s/g, '')
+      var tempAlbum = album.toLowerCase().replace("'", '')
       console.log(album)
-      console.log(this.current.tracks[album])
-      for (var key in this[artist].songs[album]) {
-        if (this[artist].songs[album][key].title === song) {
-          this.current.tracks = this[artist].songs[album][key]
+      console.log(this.current.tracks[tempAlbum])
+      for (var key in this[artist].songs[tempAlbum]) {
+        if (this[artist].songs[tempAlbum][key].title === song) {
+          this.current.tracks = this[artist].songs[tempAlbum][key]
         }
       }
       // this.current.tracks = this[this.current.id].songs[album]

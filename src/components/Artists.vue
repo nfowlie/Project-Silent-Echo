@@ -17,6 +17,30 @@
           <div>The Lady Comes First</div>
         </router-link>
       </div>
+      <div class="artist">
+        <router-link :to="{name: 'Artist', params: { artist: 'mrdreem'}}">
+          <div class="image-tint">
+              <img src="../assets/images/mrdreem.jpg">
+          </div>
+          <div>Mr. Dreem</div>
+        </router-link>
+      </div>
+      <div class="artist">
+        <router-link :to="{name: 'Artist', params: { artist: 'crop_circles'}}">
+          <div class="image-tint">
+              <img src="../assets/images/crop_circles.jpg">
+          </div>
+          <div>Crop Circles</div>
+        </router-link>
+      </div>
+      <div class="artist">
+        <router-link :to="{name: 'Artist', params: { artist: 'the_people_people'}}">
+          <div class="image-tint">
+              <img src="../assets/images/the_people_people.jpg">
+          </div>
+          <div>The People People</div>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>

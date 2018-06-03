@@ -10,7 +10,7 @@
             <br/><br/>Silent Echo is a member of BMI in the USA and APRA in Australia.
             <br/><br/>Silent Echo welcomes musical submissions for consideration in our program.
             <br/><br/>Please send file links to:
-            <br/><br/>submissions@silentechopublishing.com
+            <br/><br/>dafowlie@silentechopublishing.com
         </div>
       </div>
     </div>

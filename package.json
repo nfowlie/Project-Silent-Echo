@@ -13,6 +13,7 @@
   "dependencies": {
     "clipboard": "^1.7.1",
     "vue": "^2.5.13",
+    "vue-clipboard2": "0.0.8",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
